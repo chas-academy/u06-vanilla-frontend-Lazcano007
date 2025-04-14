@@ -1,0 +1,66 @@
+// Variabeldeklarationer för att hålla designen konsekvent
+$background-color: #f5f7fa;       // Bakgrundsfärg för hela sidan
+$container-bg: #ffffff;           // Bakgrundsfärg för korten
+$primary-color: #3498db;          // Primär färg, används bland annat för rubriken
+$text-color: #333;               // Standard textfärg
+$border-radius: 10px;            // Rundade hörn för korten
+$card-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Lätt skugga på korten
+$header-font-size: 2.5rem;       // Storlek för rubriken (petName)
+$card-padding: 20px;             // Padding inuti varje kort
+$card-margin-bottom: 20px;       // Marginal under varje kort
+
+// Globala inställningar
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+// Container som håller allt innehåll på pet profile-sidan
+.petProfileContainer {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+
+  // Rubriken för djurets namn
+  #petName {
+    font-size: $header-font-size;
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  // Styling för varje kort (för Pet-info, Vaccin-info, Besök-info)
+  .card {
+    background-color: $container-bg;
+    padding: $card-padding;
+    border-radius: $border-radius;
+    box-shadow: $card-shadow;
+    margin-bottom: $card-margin-bottom;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .petProfileContainer {
+    padding: 0 10px;
+    
+    #petName {
+      font-size: 2rem;
+    }
+
+    .card {
+      padding: 15px;
+    }
+  }
+}
