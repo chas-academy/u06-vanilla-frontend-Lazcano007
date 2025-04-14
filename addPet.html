@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Pet</title>
+  </head>
+  <body>
+    <h1 class="title">NEW PET</h1>
+    <div class="formGruop">
+      <form id="addPetForm">
+        <div class="InputBox">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required/>
+        </div>
+        <div class="InputBox">
+          <label for="breed">Breed</label>
+          <input type="text" id="breed" name="breed" required/>
+        </div>
+        <div class="InputBox">
+          <label for="species">Species</label>
+          <input type="text" id="species" name="species" required/>
+        </div>
+        <div class="InputBox">
+          <label for="age">Age</label>
+          <input type="text" id="age" name="age" required/>
+        </div>
+        <div class="submitButton">
+          <button type="submit" class="addButton">Add pet</button>
+        </div>
+      </form>
+    </div>
+    <script type="module" src="/src/addPet.ts"></script>
+  </body>
+</html>
