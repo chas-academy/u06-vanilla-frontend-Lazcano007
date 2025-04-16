@@ -2,11 +2,10 @@ import './style.scss';
 
 const form = document.getElementById("registerForm") as HTMLFormElement;  // hämtar register-formuläret från DOM:en
 
-
 form.addEventListener("submit", (event) => {      // event är ett "event-objekt" som innehåller information om den händelsen som precis inträffade (submit i detta fall)
   event.preventDefault();                         // förhindrar att sidan laddas om vid formulärinlämning
 
-    // hämtar värden från inputfälten
+  // hämtar värden från inputfälten
   const name = (document.getElementById("name") as HTMLInputElement).value;
   const email = (document.getElementById("email") as HTMLInputElement).value;
   const password = (document.getElementById("password") as HTMLInputElement).value;
@@ -18,12 +17,24 @@ form.addEventListener("submit", (event) => {      // event är ett "event-objekt
   })
     .then((response) => {
       return response.json().then((data) => {
+        console.log("Your registration has successful!", data);
+
         if (!response.ok) {
           alert(data.message || "Registration failed, try again!");
           return;
         }
+
+        const userId = data._id || data.user?._id;
+        if (userId) {
+          localStorage.setItem("userId", userId);                                 // spara userId i localStorage
+        } else {
+          alert("We couldn't find your account, plaese try again!");
+          return;
+        }
+
         alert("Your account has been created!");
-        window.location.href = "/dashboard.html"; // omdirigerar till dashboard
+        form.reset();                                                               // rensar formuläret
+        window.location.href = "/dashboard.html";                                   // omdirigerar till dashboard
       });
     })
     .catch((error) => {
