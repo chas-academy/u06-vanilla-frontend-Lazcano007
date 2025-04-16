@@ -10,6 +10,10 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         nested: resolve(__dirname, 'dashboard.html'),
+        nested: resolve(__dirname, 'addPet.html'),
+        nested: resolve(__dirname, 'register.html'),
+        nested: resolve(__dirname, 'petProfile.html'),
+        nested: resolve(__dirname, 'petEdit.html'),
       },
     },
   },
