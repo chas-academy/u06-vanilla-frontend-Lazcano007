@@ -23,7 +23,7 @@ form.addEventListener("submit", (event) => {      // event är ett "event-objekt
           return;
         }
         alert("Your account has been created!");
-        form.reset();                              // rensar formuläret
+        window.location.href = "/dashboard.html"; // omdirigerar till dashboard
       });
     })
     .catch((error) => {
