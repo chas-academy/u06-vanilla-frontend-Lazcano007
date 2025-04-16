@@ -1,0 +1,81 @@
+#petCard {
+  background-color: #f20808;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1rem;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.349);
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+#petCard h3 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+  font-size: 1.3rem;
+}
+#petCard .field {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.2rem 0;
+  word-break: break-word;
+}
+#petCard button {
+  background-color: #3a86ff;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: center;
+  margin-top: 0.5rem;
+}
+#petCard button:hover {
+  background-color: #265df2;
+}
+#petCard .edit-btn {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  background-color: #0077b6;
+  border-radius: 50%;
+  padding: 0.3rem 0.6rem;
+  color: white;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+}
+#petCard .delete-btn {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  background-color: red;
+  border-radius: 50%;
+  padding: 0.3rem 0.6rem;
+  color: white;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  #petCard {
+    max-width: 90%;
+    padding: 1rem;
+  }
+  #petCard .field {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #petCard button {
+    font-size: 0.9rem;
+  }
+}/*# sourceMappingURL=petProfile.css.map */
