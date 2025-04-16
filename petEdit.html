@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Edit Pet</title>
+  </head>
+  <body>
+    <h1 id="petName">Edit Pet</h1>
+    <div class="editContainer">
+      <form id="editPetForm">
+        <button type="button" class="delete-btn">Delete</button>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required/>
+        <label for="species">Species:</label>
+        <input type="text" id="species" required/>
+        <label for="breed">Breed:</label>
+        <input type="text" id="breed" required/>
+        <label for="age">Age:</label>
+        <input type="number" id="age" required/>
+        <button type="submit" class="save-btn">Save</button>
+      </form>
+    </div>
+    <script type="module" src="/src/petEdit.ts"></script>
+  </body>
+</html>
