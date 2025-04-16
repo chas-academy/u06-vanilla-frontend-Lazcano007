@@ -43,7 +43,7 @@ if (!userId) {
   if (logoutBtn) {
     logoutBtn.addEventListener("click", () => {
       localStorage.removeItem("userId");                                        // ta bort userId från localstorage
-      window.location.href = "/login.html";                                     // omdirigera till login sidan
+      window.location.href = "/index.html";                                     // omdirigera till login sidan
     });
   }
 }
