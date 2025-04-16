@@ -60,6 +60,7 @@ body {
 .title {
   font-size: 1.8rem;
   text-align: center;
+  font-weight: bold;
   margin-bottom: 1.5rem;
 }
 
@@ -116,7 +117,18 @@ table tbody tr:hover {
     background-color: #3cb1a3;
   }
 }
-
+.no-pets-message {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background:  #d8fdfa;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  color: #333;
+}
 // MOBIL anpassad
 @media (max-width: 940px) {
   .sidebar {
@@ -152,4 +164,11 @@ table tbody tr:hover {
     margin-left: 0;
     margin-bottom: 70px;
   }
+
+  .title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 4rem 1.5rem; 
+  }
+  
 }
