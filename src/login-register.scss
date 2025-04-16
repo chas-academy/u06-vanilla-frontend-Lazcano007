@@ -47,17 +47,31 @@ body {
 
   button {
     margin: 1.5rem auto 0 auto; 
-    padding: 0.5rem 1.2rem;      
-    background-color:  #6fd0c4;
+    padding: 0.5rem 1.5rem;      
+    background-color:  #61cfc2;
     color: rgb(255, 255, 255);
     font-weight: bold;
     border: none;
     border-radius: 20px;
     font-size: 1rem;
-    cursor: pointer;       
+    cursor: pointer;
+    transition: background-color 0.5s ease;
     &:hover {
-      opacity: 0.6;
+      background-color: #32998d;
     }
   }
   
+  .registerBtn {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    a {
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+      &:hover {
+        color: #2831d8;
+      }
+    }
+  }
 }
