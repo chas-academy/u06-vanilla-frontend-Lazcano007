@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard</title>
-</head>
-<body>
-  <div class="dashboardContainer">
-    <aside class="sidebar">
-      <nav class="menu">
-        <button class="menuButton">Home</button>
-        <button class="menuButton">Pets</button>
-        <button class="menuButton logout">Log out</button>
-      </nav>
-    </aside>
-    <main class="mainContent">
-      <h1 class="title">DASHBOARD</h1>
-
-      <div class="addPetSection">
-        <button id="goToAddPet" class="addButton">Add new pet</button>
-      </div>
-      <div class="tableWrapper">
-      <table class="petTable">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Species</th>
-            <th>Breed</th>
-            <th>Age</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="dashboardContainer">
+      <aside class="sidebar">
+        <div class="menu">
+          <button class="menuButton logout" type="button" id="logoutBtn">
+            Log out
+          </button>
+        </div>
+      </aside>
+      <main class="mainContent">
+        <h1 class="title">DASHBOARD</h1>
+        <div class="addPetSection">
+          <button id="goToAddPet" class="addButton">Add new pet</button>
+        </div>
+        <div class="tableWrapper">
+          <table class="petTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Species</th>
+                <th>Breed</th>
+                <th>Age</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </main>
     </div>
-    </main>
-  </div>
-
-  <script type="module" src="/src/dashboard.ts"></script>
-</body>
+    <script type="module" src="/src/dashboard.ts"></script>
+  </body>
 </html>
