@@ -14,6 +14,7 @@ export default defineConfig({
         register: resolve(__dirname, 'register.html'),
         petProfile: resolve(__dirname, 'petProfile.html'),
         petEdit: resolve(__dirname, 'petEdit.html'),
+        login: resolve(__dirname, 'index.html')
       },
     },
   },
