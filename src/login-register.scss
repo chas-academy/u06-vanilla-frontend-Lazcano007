@@ -1,15 +1,8 @@
-
-$background: #b7e3df;
-$card-bg: #a8d7ce;
-$button-bg: #6fd0c4;
-$button-text: #fff;
-$text-color: #000;
-$input-bg: #fff;
+$text-color: #000000;
 
 body {
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: $background;
+  background-color: #b7e3df;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -22,19 +15,18 @@ body {
   align-items: center;
 
   h1 {
-    font-size: 2rem;
-    font-weight: bold;
+    text-decoration: underline;
     color: $text-color;
     margin-bottom: 1rem;
   }
 }
 
 .card {
-  background-color: $card-bg;
+  background-color:  #a8d7ce;
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 20px;
   width: 320px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.466);
 
   label {
     display: block;
@@ -46,26 +38,26 @@ body {
   input {
     width: 100%;
     padding: 0.5rem;
-    border-radius: 8px;
+    border-radius: 10px;
     border: none;
-    background-color: $input-bg;
+    background-color: rgb(255, 255, 255);
     margin-top: 0.5rem;
     font-size: 1rem;
   }
 
   button {
-    margin-top: 1.5rem;
-    padding: 0.5rem 1.5rem;
-    background-color: $button-bg;
-    color: $button-text;
+    margin: 1.5rem auto 0 auto; 
+    padding: 0.5rem 1.2rem;      
+    background-color:  #6fd0c4;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     border: none;
     border-radius: 20px;
     font-size: 1rem;
-    cursor: pointer;
-
+    cursor: pointer;       
     &:hover {
-      opacity: 0.9;
+      opacity: 0.6;
     }
   }
+  
 }

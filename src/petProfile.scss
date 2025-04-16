@@ -1,66 +1,112 @@
-// Variabeldeklarationer för att hålla designen konsekvent
-$background-color: #f5f7fa;       // Bakgrundsfärg för hela sidan
-$container-bg: #ffffff;           // Bakgrundsfärg för korten
-$primary-color: #3498db;          // Primär färg, används bland annat för rubriken
-$text-color: #333;               // Standard textfärg
-$border-radius: 10px;            // Rundade hörn för korten
-$card-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Lätt skugga på korten
-$header-font-size: 2.5rem;       // Storlek för rubriken (petName)
-$card-padding: 20px;             // Padding inuti varje kort
-$card-margin-bottom: 20px;       // Marginal under varje kort
-
-// Globala inställningar
-* {
+html, body {
+  width: 100%;
+  min-width: 100vw;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #b2dfdb;
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: $background-color;
-  color: $text-color;
+.petProfileContainer {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-// Container som håller allt innehåll på pet profile-sidan
-.petProfileContainer {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
+#petName {
+  text-align: center;
+  margin: 2rem 0 1.5rem 0;
+  text-decoration: underline;
+  font-size: 2rem;
+  font-weight: bold;
+}
 
-  // Rubriken för djurets namn
-  #petName {
-    font-size: $header-font-size;
-    color: $primary-color;
-    text-align: center;
-    margin-bottom: 30px;
+#petCard {
+  background-color:  #d8fdfa;
+  border-radius: 20px;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.579);
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  margin: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+
+  .petFrame {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
   }
 
-  // Styling för varje kort (för Pet-info, Vaccin-info, Besök-info)
-  .card {
-    background-color: $container-bg;
-    padding: $card-padding;
-    border-radius: $border-radius;
-    box-shadow: $card-shadow;
-    margin-bottom: $card-margin-bottom;
-    transition: transform 0.2s ease-in-out;
+  h3 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+    font-size: 1.5rem;
+  }
+
+  .field {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+  }
+  
+  
+  .label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-right: 3rem;
+    justify-content: center;
+    
+  }
+
+  button {
+    background-color:  #2831d8;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: center;
+    border: none;
 
     &:hover {
-      transform: translateY(-5px);
+      background-color: #179ff4;
+      transition: 0.5s;
     }
   }
+
+  .edit-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #2831d8;
+    border-radius: 100px;
+    color: white;
+  
+    border: none;
+    cursor: pointer;
+  }
+
+
 }
 
 @media (max-width: 600px) {
-  .petProfileContainer {
-    padding: 0 10px;
-    
-    #petName {
-      font-size: 2rem;
-    }
 
-    .card {
-      padding: 15px;
-    }
+  .petProfileContainer {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  #petCard {
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem 1rem; 
   }
 }

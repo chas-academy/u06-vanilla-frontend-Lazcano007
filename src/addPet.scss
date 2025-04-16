@@ -1,7 +1,6 @@
 body {
-    background-color: #b6eee9;
+    background-color: #d8fdfa;
     font-family: Arial, sans-serif;
-    margin: 0;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -17,12 +16,12 @@ body {
   }
   
   .formGruop {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.416);
     padding: 2rem;
     border-radius: 15px;
     max-width: 400px;
     width: 100%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.574);
   }
   
   form {
@@ -34,12 +33,10 @@ body {
   .InputBox {
     display: flex;
     flex-direction: column;
-  
     label {
       font-weight: bold;
-      margin-bottom: 0.4rem;
+      margin-bottom: .5rem;
     }
-  
     input {
       padding: 0.6rem 1rem;
       border: none;
@@ -56,15 +53,14 @@ body {
     .addButton {
       background-color: #4cd3c2;
       color: white;
-      padding: 0.8rem 1.6rem;
+      padding: 1rem 1.5rem;
       border: none;
       border-radius: 30px;
       font-size: 1rem;
       font-weight: bold;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.5s ease;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  
       &:hover {
         background-color: #3cb1a3;
       }
@@ -76,14 +72,8 @@ body {
     .title {
       font-size: 1.5rem;
     }
-  
     .formWrapper {
       padding: 1.5rem;
-    }
-  
-    .addButton {
-      font-size: 0.9rem;
-      padding: 0.6rem 1.2rem;
     }
   }
   
