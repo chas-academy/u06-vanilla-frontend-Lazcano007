@@ -24,10 +24,10 @@ if (!userId) {
         if (messageContainer) {
           const msgContainer = document.createElement("div");
           msgContainer.classList.add("no-pets-message");
-          msgContainer.textContent = "You don’t have any pets yet. Click 'Add new pet' to get started!";
+          msgContainer.textContent = "You don’t have any pets registered yet. Click 'Add new pet' to get started!";
           messageContainer.appendChild(msgContainer);
         }
-        return [];                                                        // tom lista så den inte försöker loopa pets
+        return [];                                                        // returerar tom lista så den inte försöker loopa pets
       }
       if (!res.ok) {
         console.error("Server error", res.status);
@@ -50,7 +50,7 @@ if (!userId) {
           <td>${pet.age}</td>`;
 
         row.addEventListener("click", () => {
-          window.location.href = `petProfile.html?id=${pet._id}`;
+          window.location.href = `petProfile.html?id=${pet._id}`;           // omdirigerar till petProfile-sidan med "petId"
         });
         row.classList.add("clickableRow");
         petTableBody?.appendChild(row);                 // lägger till en ny rad längst ner i tabellen

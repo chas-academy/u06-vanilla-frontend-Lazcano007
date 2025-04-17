@@ -27,11 +27,10 @@ form.addEventListener("submit", (event) => {           // event är ett "event-o
     .then((response) => {
       return response.json().then((data) => {
         if (!response.ok) {
-          alert( data.message || "Something went wrong when registering your pet!"
-          );
+          alert( data.message || "Something went wrong when registering your pet!");
           return;
         }
-
+        
         alert("Your pet has successfully been added!");
         window.location.href = "/dashboard.html";                         // omdirigerar till dashboard-sidan
       });
