@@ -1,29 +1,26 @@
 import './style.scss';
 
-function getQueryParam(param: string): string | null {
-  const urlParams = new URLSearchParams(window.location.search);
+function getQueryParam(param: string): string | null {               // hämtar värdet på en specifik query parameter från URL:en
+  const urlParams = new URLSearchParams(window.location.search);     // "new URLSearchParams" skapar ett objekt som gör det lätt att hämta ut enskilda parametrar från URL:en 
   return urlParams.get(param);
 }
 
-const petId = getQueryParam("id");
+const petId = getQueryParam("id");                                // hämtar petId:et från URL:en
 const petDetailsDiv = document.getElementById("petCard");
 
 if (!petId) {
-  alert("No pet ID provided in the URL!");
 } else {
   fetch(`https://u05.onrender.com/api/v1/Pets/getPetById/${petId}`)
     .then((res) => {
       if (!res.ok) throw new Error("Response not ok");
-      return res.json();
-    })
+      return res.json();})
     .then((pet) => {
       const nameElement = document.getElementById("petName");
       if (nameElement) {
-        nameElement.textContent = "Pet Profil";
+        nameElement.textContent = "Pet Profil";         //   " nameElement.textContent" sätter textinnehållet i elementet "Pet Profile"
       }
-
       if (petDetailsDiv) {
-        petDetailsDiv.innerHTML = `
+        petDetailsDiv.innerHTML = `                     
         <div class="petFrame">
           <button class="edit-btn" id="editPetBtn">Edit</button>
           <h3></h3>
@@ -32,20 +29,19 @@ if (!petId) {
           <div class="field"><span class="label">Breed:</span> ${pet.breed}</div>
           <div class="field"><span class="label">Age:</span> ${pet.age}</div>
         </div>`;
-
-        const editButton = document.getElementById("editPetBtn");
+        const editButton = document.getElementById("editPetBtn");                 
         if (editButton) {
           editButton.addEventListener("click", () => {
-            window.location.href = `/petEdit.html?id=${petId}`;
-          });
+            window.location.href = `/petEdit.html?id=${petId}`;                   // omdirigerar till petProfile-sidan med "petId"
+    });
         }
       }
     })
     .catch((error) => {
-      console.error("There's been an error fetching your pet details:", error);
+      console.error("Error fetching pet details", error);
       if (petDetailsDiv) {
         petDetailsDiv.innerHTML = `<p>Error fetching pet details!</p>`;
       }
-      alert("Error fetching pet details!");
+      alert("There's been an error fetching your pet details!");
     });
 }
