@@ -75,8 +75,7 @@ body {
   width: 100%;
   max-width: 600px;
 
-  th,
-  td {
+  th, td {
     padding: 1rem 1rem;
     text-align: left;
   }
@@ -129,6 +128,7 @@ table tbody tr:hover {
   font-size: 1.1rem;
   color: #333;
 }
+
 // MOBIL anpassad
 @media (max-width: 940px) {
   .sidebar {
@@ -155,7 +155,7 @@ table tbody tr:hover {
   .menuButton {
     width: 100%;
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     padding: 0.5rem;
     border-radius: 10px;
   }
