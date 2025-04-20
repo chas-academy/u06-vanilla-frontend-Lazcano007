@@ -12,7 +12,7 @@ Projektet innehåller fullständigt stöd för CRUD-operationer för djur, samt 
 
 ## Figma-design
 
-Designen för projektet är skapad i Figma och fungerar som en visuell riktlinje för gränssnittet. Här nedan finns länken: [U06-Frontend](https://www.figma.com/design/zZR3xrdGOXaK5HZqU9hNcl/U06-SKISS?node-id=0-1&t=G5fkP0MYxJr47c62-1)
+Designen för projektet är skapad i Figma och fungerar som en visuell riktlinje för gränssnittet. Här nedan finns länken: [U06-Frontend-design](https://www.figma.com/design/zZR3xrdGOXaK5HZqU9hNcl/U06-SKISS?node-id=0-1&t=G5fkP0MYxJr47c62-1)
 
 ## Deployad
 
